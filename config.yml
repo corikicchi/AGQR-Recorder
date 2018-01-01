@@ -1,6 +1,12 @@
+# path of schedule file
+schedule: ./schedule.yml
+
+# path to save media files
+flv: ./AGQR/flv
+mp4: ./AGQR/mp4
+m4a: ./AGQR/m4a
+
 # rtmpdump executable
 rtmpdump: rtmpdump
 # ffmpeg executable
 ffmpeg: ffmpeg
-# path of schedule file
-schedule: ./schedule.yml

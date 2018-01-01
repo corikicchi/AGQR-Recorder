@@ -29,7 +29,21 @@ class config:
 
         self.fp_schedule = os.path.join(os.path.dirname(self.fp_yml), self.yml["schedule"])
         self.fp_schedule = os.path.realpath(os.path.expanduser(self.fp_schedule))
+        if not os.path.exists(self.fp_schedule) and not os.path.isfile(self.fp_schedule):
+            raise IOError(ENOENT, "No such file", self.fp_schedule)
         print("    schedule: {0}".format(self.fp_schedule))
+
+        self.dn_flv = os.path.join(os.path.dirname(self.fp_yml), self.yml["flv"])
+        self.dn_flv = os.path.realpath(os.path.expanduser(self.dn_flv))
+        print("    path to save *.flv: {0}".format(self.dn_flv))
+
+        self.dn_mp4 = os.path.join(os.path.dirname(self.fp_yml), self.yml["mp4"])
+        self.dn_mp4 = os.path.realpath(os.path.expanduser(self.dn_mp4))
+        print("    path to save *.mp4: {0}".format(self.dn_mp4))
+
+        self.dn_m4a = os.path.join(os.path.dirname(self.fp_yml), self.yml["m4a"])
+        self.dn_m4a = os.path.realpath(os.path.expanduser(self.dn_m4a))
+        print("    path to save *.m4a: {0}".format(self.dn_m4a))
 
         # load schedule file
         with open(self.fp_schedule, "r") as fin:
