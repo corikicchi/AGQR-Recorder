@@ -1,0 +1,6 @@
+# rtmpdump executable
+rtmpdump: rtmpdump
+# ffmpeg executable
+ffmpeg: ffmpeg
+# path of schedule file
+schedule: ./schedule.yml
