@@ -10,7 +10,7 @@ class config:
     def __init__(self, fn_yml):
         self.fp_yml = os.path.realpath(os.path.expanduser(fn_yml))
         if not os.path.exists(self.fp_yml) and not os.path.isfile(self.fp_yml):
-            raise IOError(ENOENT, "No such file", self.fp_yml)
+            raise FileNotFoundError(ENOENT, "No such file", self.fp_yml)
 
         # load config.yml
         with open(self.fp_yml, "r") as fin:
