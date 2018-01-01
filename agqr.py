@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import sys
 import time
 import datetime
 import subprocess
@@ -109,7 +110,14 @@ def record(config, program):
 
 
 if __name__ == "__main__":
-    config = config.config("config.yml")
+    if len(sys.argv) == 1:
+        print("Usage:")
+        print("\t{} /path/to/config.yml".format(os.path.basename(sys.argv[0])))
+        exit(1)
+    fp_config = os.path.realpath(os.path.expanduser(sys.argv[1]))
+    if not os.path.exists(fp_config) or not os.path.isfile(fp_config):
+        raise FileNotFoundError(ENOENT, "No such file", fp_config)
+    config = config.config(fp_config)
 
     program = check(config)
     if program is not None:
