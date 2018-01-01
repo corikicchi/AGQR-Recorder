@@ -21,7 +21,7 @@ $ pip3 install pyyaml
 ```
 
 2. Configure config.yml
-    - Configure config.yml according to your environment.
+    - Configure config.yml according to your environment. **DO NOT** use tilde (`~`) when using crontab.
 
 ```bash
 $ cat config.yml
@@ -32,9 +32,9 @@ schedule: ./schedule.yml
 log: ./log.txt
 
 # path to save media files
-flv: ~/Music/AGQR/flv
-mp4: ~/Music/AGQR/mp4
-m4a: ~/Music/AGQR/m4a
+flv: ./AGQR/flv
+mp4: ./AGQR/mp4
+m4a: ./AGQR/m4a
 
 # rtmpdump executable
 rtmpdump: rtmpdump
@@ -70,7 +70,7 @@ The definition of wday is as below.
 |      |Mon|Tue|Wed|Thu|Fri|Sat|Sun|
 
 4. Configure crontab
-    - Append crontab.
+    - Append schedule to crontab.
 
 ```bash
 $ crontab -e
@@ -78,5 +78,5 @@ $ crontab -e
 
 ```crontab
 # AGQR Recorder
-29,59 * * * /usr/bin/python3 /full/path/to/AGQR-Recorder/agqr.py > /dev/null
+29,59 * * * * /usr/bin/python3 /full/path/to/AGQR-Recorder/agqr.py /full/path/to/AGQR-Recorder/config.yml > /dev/null
 ```
