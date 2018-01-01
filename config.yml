@@ -1,6 +1,9 @@
 # path of schedule file
 schedule: ./schedule.yml
 
+# path of a log file
+log: ./log.txt
+
 # path to save media files
 flv: ./AGQR/flv
 mp4: ./AGQR/mp4
@@ -10,3 +13,6 @@ m4a: ./AGQR/m4a
 rtmpdump: rtmpdump
 # ffmpeg executable
 ffmpeg: ffmpeg
+
+# AGQR streaming URL
+stream: rtmp://fms-base1.mitene.ad.jp/agqr/aandg22

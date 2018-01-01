@@ -33,6 +33,13 @@ class config:
             raise IOError(ENOENT, "No such file", self.fp_schedule)
         print("    schedule: {0}".format(self.fp_schedule))
 
+        self.fp_log = os.path.join(os.path.dirname(self.fp_yml), self.yml["log"])
+        self.fp_log = os.path.realpath(os.path.expanduser(self.fp_log))
+        print("    log file: {0}".format(self.fp_log))
+
+        self.stream = self.yml["stream"]
+        print("    stream: {0}".format(self.stream))
+
         self.dn_flv = os.path.join(os.path.dirname(self.fp_yml), self.yml["flv"])
         self.dn_flv = os.path.realpath(os.path.expanduser(self.dn_flv))
         print("    path to save *.flv: {0}".format(self.dn_flv))
