@@ -1,29 +1,41 @@
-- title: Five_Stars_Mon
+- title: Five_Stars_Tue
   wday: 1
   time: "20:00"
   length: 60
   movie: 1
 
-- title: Five_Stars_Tue
+- title: Five_Stars_Wed
   wday: 2
   time: "20:00"
   length: 60
   movie: 1
 
-- title: Five_Stars_Wed
+- title: Five_Stars_Thu
   wday: 3
   time: "20:00"
   length: 60
   movie: 1
 
-- title: Five_Stars_Thu
+- title: HomerunRadio_PattoUP
   wday: 4
-  time: "20:00"
+  time: "16:00"
   length: 60
   movie: 1
 
-- title: Five_Stars_Fri
-  wday: 5
-  time: "20:00"
+- title: Yoru_Night_Mon
+  wday: 1
+  time: "0:00"
   length: 60
+  movie: 1
+
+- title: Yoru_Night_Thu
+  wday: 4
+  time: "0:00"
+  length: 60
+  movie: 1
+
+- title: Hondo_Joriku_Sakusen
+  wday: 1
+  time: "2:00"
+  length: 30
   movie: 1
