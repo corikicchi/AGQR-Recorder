@@ -1,0 +1,29 @@
+- title: Five_Stars_Mon
+  wday: 1
+  time: "20:00"
+  length: 60
+  movie: 1
+
+- title: Five_Stars_Tue
+  wday: 2
+  time: "20:00"
+  length: 60
+  movie: 1
+
+- title: Five_Stars_Wed
+  wday: 3
+  time: "20:00"
+  length: 60
+  movie: 1
+
+- title: Five_Stars_Thu
+  wday: 4
+  time: "20:00"
+  length: 60
+  movie: 1
+
+- title: Five_Stars_Fri
+  wday: 5
+  time: "20:00"
+  length: 60
+  movie: 1
