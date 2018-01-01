@@ -30,3 +30,7 @@ class config:
         self.fp_schedule = os.path.join(os.path.dirname(self.fp_yml), self.yml["schedule"])
         self.fp_schedule = os.path.realpath(os.path.expanduser(self.fp_schedule))
         print("    schedule: {0}".format(self.fp_schedule))
+
+        # load schedule file
+        with open(self.fp_schedule, "r") as fin:
+            self.schedule = yaml.load(fin)
