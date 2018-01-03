@@ -78,5 +78,5 @@ $ crontab -e
 
 ```crontab
 # AGQR Recorder
-29,59 * * * * /usr/bin/python3 /full/path/to/AGQR-Recorder/agqr.py /full/path/to/AGQR-Recorder/config.yml > /dev/null
+29,59 * * * * /usr/bin/python3 /full/path/to/AGQR-Recorder/agqr.py /full/path/to/AGQR-Recorder/config.yml > /dev/null 2>&1
 ```
