@@ -15,4 +15,4 @@ rtmpdump: rtmpdump
 ffmpeg: ffmpeg
 
 # AGQR streaming URL
-stream: rtmp://fms-base1.mitene.ad.jp/agqr/aandg22
+stream: rtmp://fms-base1.mitene.ad.jp/agqr/aandg1
